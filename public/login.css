@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: montserrat;
+    height: 100vh;
+    overflow: hidden;
+    background-color:#e9f4fb;
+}
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.login h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.login form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .detail{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.detail input{
+    padding: 0 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.detail label{
+    position: absolute;   
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+.detail span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #c1c8cc;
+}
+.detail input:focus ~ label,
+.detail input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.detail input:focus ~ span::before,
+.detail input:valid ~ span::before{
+    width: 100%;
+}
+/* .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+} */
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: #7594a9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline:none;
+}
+input[type="submit"]:hover{
+    border-color: #9abed7;
+    transition: .5s;
+}
+.signup{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup a{
+    color:#2691d9;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
